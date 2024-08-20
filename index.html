@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script
+    src="https://kit.fontawesome.com/031cf1ead3.js"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <title>The Game</title>
+</head>
+<html>
+  <body>
+    <div class="game-finish-container">
+      <div class="game-finish-message">
+        <div class="reset-buttons-container">
+          <button class="soft-reset-button">Restart same settings</button>
+          <button class="hard-reset-button">Choose new settings</button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"></div>
+          <div class="flip-card-back"></div>
+        </div>
+      </div>
+      <div class="main-game-board"></div>
+      <div class="game-result-board">
+        <button class="reset-button">RESET</button>
+        <div class="turns-and-time">
+          <h5 class="turn-counter">Moves: 0</h5>
+          <h5 class="timer">Time: 00:00</h5>
+        </div>
+        <div class="best-user-results"></div>
+      </div>
+    </main>
+    <form id="myForm">
+      <h1>Welcome to memory game!</h1>
+      <div>
+        <h3>1. Choose game difficulty</h3>
+        <h3>2. Click "START"</h3>
+        <h3>3. Have fun!</h3>
+      </div>
+
+      <div class="diff-selection">
+        <div class="move-limit">
+          <h2>Move limit</h2>
+          <input
+            type="radio"
+            name="diff"
+            id="easyDiff"
+            value="unlimited"
+            checked
+          />
+          <label class="level-label" for="easyDiff"
+            >Easy - unlimited moves</label
+          >
+          <br />
+          <input type="radio" name="diff" id="medDiff" value="20" />
+          <label class="level-label" for="medDiff">Medium - 20 moves</label>
+          <br />
+          <input type="radio" name="diff" id="hardDiff" value="12" />
+          <label class="level-label" for="hardDiff">Hard - 12 moves</label>
+          <br />
+        </div>
+
+        <div class="time-limit">
+          <h2>Time limit</h2>
+          <input
+            type="radio"
+            name="time"
+            id="unlimitedTime"
+            value="unlimited"
+            checked
+          />
+          <label class="time-limit-label" for="unlimitedTime"
+            >Easy - unlimited time</label
+          >
+          <br />
+          <input type="radio" name="time" id="medTime" value="60" />
+          <label class="time-limit-label" for="medTime"
+            >Medium - 60 seconds</label
+          >
+          <br />
+          <input type="radio" name="time" id="hardTime" value="30" />
+          <label class="time-limit-label" for="hardTime"
+            >Hard - 30 seconds</label
+          >
+          <br />
+        </div>
+
+        <div class="board-size">
+          <h2>Board size</h2>
+          <input
+            type="radio"
+            name="boardSize"
+            id="smallBoard"
+            value="smallBoard"
+          />
+          <label class="board-size-label" for="smallBoard"
+            >Small - 4 pairs</label
+          >
+          <br />
+          <input
+            type="radio"
+            name="boardSize"
+            id="medBoard"
+            value="medBoard"
+            checked
+          />
+          <label class="board-size-label" for="medBoard"
+            >Medium - 6 pairs</label
+          >
+          <br />
+          <input type="radio" name="boardSize" id="bigBoard" value="bigBoard" />
+          <label class="board-size-label" for="bigBoard">Hard - 8 pairs</label>
+          <br />
+        </div>
+      </div>
+      <input type="submit" value="Start" />
+    </form>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
+<!-- test -->
